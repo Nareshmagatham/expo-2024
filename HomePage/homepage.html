@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXPO 2024</title>
+<link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="book">
+    <div class="page right">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711680614/image1.jpg_wtgad1.jpg" alt="Image 1">
+    </div>
+    <div class="page right">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711680980/WhatsApp_Image_2024-03-29_at_8.25.52_AM_a8byz9.jpg" alt="Image 2">
+    </div>
+    <div class="page right">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711681434/WhatsApp_Image_2024-03-29_at_8.29.55_AM_pecdig.jpg" alt="Image 3">
+    </div>
+    <div class="page right">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711683802/WhatsApp_Image_2024-03-29_at_8.29.55_AM_1_kwwxax.jpg" alt="Image 4">
+    </div>
+    <div class="page right">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711683846/WhatsApp_Image_2024-03-29_at_8.29.56_AM_r2ac4r.jpg" alt="Image 5">
+    </div>
+    <div class="page left">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711683922/WhatsApp_Image_2024-03-29_at_8.29.56_AM_1_imghqs.jpg" alt="Image 6">
+    </div>
+    <div class="page left">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711683959/WhatsApp_Image_2024-03-29_at_8.29.57_AM_igetje.jpg" alt="Image 7">
+    </div>
+    <div class="page left">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711684000/WhatsApp_Image_2024-03-29_at_8.29.56_AM_2_iwrnyx.jpg" alt="Image 8">
+    </div>
+    <div class="page left">
+      <img src="https://res.cloudinary.com/nareshmagatham/image/upload/v1711680614/image1.jpg_wtgad1.jpg" alt="Image 9">
+    </div>
+  </div>
+</div>
+
+<div class="button-ele">
+  <button onclick="prevPage()">Prev</button>
+  <button onclick="nextPage()">Next</button>
+</div>
+<script>
+  let currentPage = 0;
+  const pages = document.querySelectorAll('.page');
+
+  function nextPage() {
+    if (currentPage < pages.length - 1) {
+      pages[currentPage].classList.remove('right');
+      pages[currentPage].style.transform = 'rotateY(-180deg)';
+      currentPage++;
+      pages[currentPage].classList.add('right');
+      pages[currentPage].style.transform = 'rotateY(0deg)';
+    }
+  }
+
+  function prevPage() {
+    if (currentPage > 0) {
+      pages[currentPage].classList.remove('left');
+      pages[currentPage].style.transform = 'rotateY(180deg)';
+      currentPage--;
+      pages[currentPage].classList.add('left');
+      pages[currentPage].style.transform = 'rotateY(0deg)';
+    }
+  }
+ </script>
+
+
+</body>
+</html>
